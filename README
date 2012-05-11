@@ -1,0 +1,27 @@
+Packaging http://cxf.apache.org/index.html
+
+BuildRequires:
+
+== in rawhide / affected by patches ==
+
+maven-archetype-packaging
+#maven-remote-resources // either this or patch
+springframework
+springframework-aop
+springframework-beans
+springframework-context
+cglib // cglib-nodep replaced; we provide 2.2 while 2.2.2 is required
+neethi
+
+== new packages ==
+
+cxf-build-utils
+cxf-xjc-utils
+ws-xmlschema
+geronimo-j2ee-connector-1.5-spec
+
+== next to be packaged ==
+geronimo-javamail-1.4-spec
+	geronimo-activation_1.1_spec
+
+org.apache.aries.blueprint.core (possibly whole aries)
