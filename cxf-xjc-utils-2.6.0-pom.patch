@@ -1,0 +1,20 @@
+diff -Naur cxf-xjc-utils-2.6.0/pom.xml cxf-xjc-utils-2.6.0-work/pom.xml
+--- cxf-xjc-utils-2.6.0/pom.xml	2012-03-30 17:47:45.856348000 +0200
++++ cxf-xjc-utils-2.6.0-work/pom.xml	2012-05-11 11:15:28.905673161 +0200
+@@ -172,16 +172,6 @@
+     <build>
+         <defaultGoal>install</defaultGoal>
+ 
+-        <plugins>
+-            <plugin>
+-                 <groupId>org.apache.maven.plugins</groupId>
+-                 <artifactId>maven-checkstyle-plugin</artifactId>
+-            </plugin>
+-            <plugin>
+-                 <groupId>org.apache.maven.plugins</groupId>
+-                 <artifactId>maven-pmd-plugin</artifactId>
+-            </plugin>
+-        </plugins>
+         <pluginManagement>
+             <plugins>
+                 <plugin>
