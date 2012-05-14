@@ -1,0 +1,45 @@
+diff -Naur -x '*java' aries-util-0.4/pom.xml aries-util-0.4-work/pom.xml
+--- aries-util-0.4/pom.xml	2012-05-14 19:42:13.369895684 +0200
++++ aries-util-0.4-work/pom.xml	2012-05-14 19:48:00.946570007 +0200
+@@ -18,15 +18,9 @@
+ -->
+ <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+     <modelVersion>4.0.0</modelVersion>
+-    <parent>
+-        <groupId>org.apache.aries</groupId>
+-        <artifactId>java5-parent</artifactId>
+-        <version>0.5</version>
+-        <relativePath />
+-    </parent>
+-
++    
++    <groupId>org.apache.aries</groupId>
+     <artifactId>org.apache.aries.util</artifactId>
+-    <packaging>bundle</packaging>
+     <version>0.4</version>
+     <name>Apache Aries Util</name>
+     <description>
+@@ -68,21 +62,16 @@
+ 
+     <dependencies>
+         <dependency>
+-            <groupId>org.osgi</groupId>
++            <groupId>org.apache.felix</groupId>
+             <artifactId>org.osgi.core</artifactId>
+             <scope>provided</scope>
+         </dependency>
+         <dependency>
+-            <groupId>org.osgi</groupId>
++            <groupId>org.apache.felix</groupId>
+             <artifactId>org.osgi.compendium</artifactId>
+             <scope>provided</scope>
+         </dependency>
+         <dependency>
+-            <groupId>org.eclipse</groupId>
+-            <artifactId>osgi</artifactId>
+-            <scope>provided</scope>
+-        </dependency>
+-        <dependency>
+             <groupId>org.slf4j</groupId>
+             <artifactId>slf4j-api</artifactId>
+             <scope>provided</scope>

@@ -1,0 +1,79 @@
+diff -Naur -x '*xml' aries-util-0.4/src/main/java/org/apache/aries/util/tracker/InternalRecursiveBundleTracker.java aries-util-0.4-work/src/main/java/org/apache/aries/util/tracker/InternalRecursiveBundleTracker.java
+--- aries-util-0.4/src/main/java/org/apache/aries/util/tracker/InternalRecursiveBundleTracker.java	2011-02-10 19:26:17.955291000 +0100
++++ aries-util-0.4-work/src/main/java/org/apache/aries/util/tracker/InternalRecursiveBundleTracker.java	2012-05-14 20:18:32.027660521 +0200
+@@ -26,7 +26,7 @@
+ import org.osgi.framework.Bundle;
+ import org.osgi.framework.BundleContext;
+ import org.osgi.framework.BundleEvent;
+-import org.osgi.service.framework.CompositeBundle;
++//import org.osgi.service.framework.CompositeBundle;
+ import org.osgi.util.tracker.BundleTracker;
+ import org.osgi.util.tracker.BundleTrackerCustomizer;
+ 
+@@ -61,15 +61,10 @@
+   {
+     Object o = null;
+ 
+-    if (b instanceof CompositeBundle) {
+-      customizedProcessBundle(this, b, event);
+-      o = b;
+-    } else {
+       // Delegate to our customizer for normal bundles
+       if (customizer != null) {
+         o = customizer.addingBundle(b, event);
+       }
+-    }
+ 
+     return o;
+   }
+@@ -81,14 +76,10 @@
+   @Override
+   public void modifiedBundle(Bundle b, BundleEvent event, Object object)
+   {
+-    if (b instanceof CompositeBundle) {
+-      customizedProcessBundle(this, b, event);
+-    } else {
+       // Delegate to our customizer for normal bundles
+       if (customizer != null) {
+         customizer.modifiedBundle(b, event, object);
+       }
+-    }
+   }
+ 
+   /*
+@@ -98,17 +89,14 @@
+   @Override
+   public void removedBundle(Bundle b, BundleEvent event, Object object)
+   {
+-    if (b instanceof CompositeBundle) {
+-      customizedProcessBundle(this, b, event);
+-    } else {
+       if (customizer != null) {
+         customizer.removedBundle(b, event, object);
+       }
+-    }
+   }
+ 
+   protected void customizedProcessBundle(BundleTrackerCustomizer btc, Bundle b, BundleEvent event)
+   {
++    /*
+     if (b instanceof CompositeBundle) {
+       CompositeBundle cb = (CompositeBundle) b;
+       // check if the compositeBundle is already tracked in the
+@@ -139,8 +127,10 @@
+         }
+       }
+     }
++    */
+   }
+ 
++  /*
+   private synchronized void openTracker(BundleTrackerCustomizer btc, CompositeBundle cb,
+       String bundleScope, int stateMask)
+   {
+@@ -157,4 +147,5 @@
+       BundleTrackerFactory.registerBundleTracker(bundleScope, bt);
+     }
+   }
++  */
+ }
