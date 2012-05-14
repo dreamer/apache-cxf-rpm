@@ -1,0 +1,32 @@
+diff -Naur -x '*java' aries-blueprint-annotation-api-0.3.2/pom.xml aries-blueprint-annotation-api-0.3.2-work/pom.xml
+--- aries-blueprint-annotation-api-0.3.2/pom.xml	2011-10-13 18:36:41.832968000 +0200
++++ aries-blueprint-annotation-api-0.3.2-work/pom.xml	2012-05-14 22:32:53.480304027 +0200
+@@ -16,16 +16,9 @@
+ -->
+ <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+     <modelVersion>4.0.0</modelVersion>
+-    <parent>
+-        <groupId>org.apache.aries</groupId>
+-        <artifactId>java5-parent</artifactId>
+-        <version>0.5</version>
+-        <relativePath />
+-    </parent>
+ 
+     <groupId>org.apache.aries.blueprint</groupId>
+     <artifactId>org.apache.aries.blueprint.annotation.api</artifactId>
+-    <packaging>bundle</packaging>
+     <name>Apache Aries Blueprint Annotation API</name>
+     <version>0.3.2</version>
+     <description>
+@@ -51,9 +44,8 @@
+ 
+      <dependencies>
+         <dependency>
+-            <groupId>org.eclipse</groupId>
+-            <artifactId>osgi</artifactId>
+-            <scope>provided</scope>
++            <groupId>org.apache.felix</groupId>
++            <artifactId>org.osgi.core</artifactId>
+         </dependency>
+     </dependencies>
+     
