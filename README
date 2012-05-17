@@ -21,7 +21,13 @@ ws-xmlschema
 geronimo-j2ee-connector-1.5-spec
 
 == next to be packaged ==
-geronimo-javamail-1.4-spec
+geronimo-javamail-1.4-spec # replaced by javamail
 	geronimo-activation_1.1_spec
 
-org.apache.aries.blueprint.core (possibly whole aries)
+aries-blueprint (module core)
+  aries-util
+  + Apache Aries Blueprint Annotation API (module)
+  + Apache Aries Blueprint API (module)
+  aries-proxy
+  aries-quiesce
+
