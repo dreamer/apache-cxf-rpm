@@ -5,7 +5,7 @@ BuildRequires:
 == in rawhide / affected by patches ==
 
 maven-archetype-packaging
-#maven-remote-resources // either this or patch
+# maven-remote-resources // either this or patch
 springframework
 springframework-aop
 springframework-beans
@@ -18,16 +18,15 @@ neethi
 [in review] cxf-build-utils
 [in review] cxf-xjc-utils
 ws-xmlschema
-geronimo-j2ee-connector-1.5-spec
-
-== next to be packaged ==
-geronimo-javamail-1.4-spec # replaced by javamail
-	geronimo-activation_1.1_spec
-
+geronimo-j2ee-connector-1.5-spec // try to replace by something
+geronimo-javamail-1.4-spec // replaced by javamail
 aries-blueprint (module core)
-  aries-util
   + Apache Aries Blueprint Annotation API (module)
   + Apache Aries Blueprint API (module)
+  aries-util
   aries-proxy
   aries-quiesce
 
+== next to be packaged ==
+org.apache.mina:mina-core:jar:2.0.0-M6 http://mina.apache.org/
+org.codehaus.jra:jra:jar:1.0-alpha-4 http://jra.codehaus.org/
