@@ -65,9 +65,9 @@ This package contains the API documentation for %{name}.
 %build
 # test fail because of missing dependencies
 mvn-rpmbuild \
-	-Dmaven.test.skip=true \
-	-Dproject.build.sourceEncoding=UTF-8 \
-	package javadoc:aggregate
+    -Dmaven.test.skip=true \
+    -Dproject.build.sourceEncoding=UTF-8 \
+    package javadoc:aggregate
 
 
 %install
@@ -107,6 +107,6 @@ cp -rp target/site/apidocs/* %{buildroot}%{_javadocdir}/%{name}
 %{_javadocdir}/%{name}
 
 %changelog
-* Thu May 10 2012 Patryk Obara <pobara@redhat.com> 2.4.1-1
+* Thu May 10 2012 Patryk Obara <pobara@redhat.com> 2.6.0-1
 - Initial packaging
 

@@ -15,8 +15,8 @@ neethi
 
 == new packages ==
 
-cxf-build-utils
-cxf-xjc-utils
+[in review] cxf-build-utils
+[in review] cxf-xjc-utils
 ws-xmlschema
 geronimo-j2ee-connector-1.5-spec
 
