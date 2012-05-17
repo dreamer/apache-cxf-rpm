@@ -1,14 +1,14 @@
 Name:             cxf-build-utils
 Version:          2.4.1
 Release:          1%{?dist}
-Summary:          Apache CXF build utils
+Summary:          Apache CXF Build Utils
 Group:            Development/Libraries
 License:          ASL 2.0
 URL:              http://cxf.apache.org/build-utils.html
 
-# svn export http://svn.apache.org/repos/asf/cxf/build-utils/tags/cxf-build-utils-2.4.1/ apache-cxf-build-utils-2.4.1
-# tar cafJ apache-cxf-build-utils-2.4.1.tar.xz apache-cxf-build-utils-2.4.1
-Source0:          apache-%{name}-%{version}.tar.xz
+# svn export http://svn.apache.org/repos/asf/cxf/build-utils/tags/cxf-build-utils-2.4.1/ cxf-build-utils-2.4.1
+# tar cafJ cxf-build-utils-2.4.1.tar.xz cxf-build-utils-2.4.1
+Source0:          %{name}-%{version}.tar.xz
 
 BuildArch:        noarch
 
@@ -20,12 +20,17 @@ BuildRequires:    maven-install-plugin
 BuildRequires:    maven-jar-plugin
 BuildRequires:    maven-javadoc-plugin
 BuildRequires:    maven-shade-plugin
+BuildRequires:    glassfish-fastinfoset
+BuildRequires:    maven-surefire-provider-junit4
 
 Requires:         jpackage-utils
 Requires:         java
+Requires:         glassfish-fastinfoset
+Requires:         maven-surefire-provider-junit4
 
 %description
-Apache something something FIXME.
+The Apache CXF Build Utils contains common utilities and configuration files
+that are used by multiple versions of the CXF builds.
 
 %package javadoc
 Summary:          Javadocs for %{name}
@@ -36,11 +41,11 @@ Requires:         jpackage-utils
 This package contains the API documentation for %{name}.
 
 %prep
-%setup -q -n apache-%{name}-%{version}
+%setup -q -n %{name}-%{version}
 
 %build
+#-Dmaven.test.skip=true \
 mvn-rpmbuild \
-  -Dmaven.test.skip=true \
   -Dproject.build.sourceEncoding=UTF-8 \
   install javadoc:aggregate
 

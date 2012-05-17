@@ -1,7 +1,7 @@
 Name:             cxf-xjc-utils
 Version:          2.6.0
 Release:          1%{?dist}
-Summary:          CXF FIXME
+Summary:          Apache CXF XJC-Utils
 Group:            Development/Libraries
 License:          ASL 2.0
 URL:              http://cxf.apache.org/xjc-utils.html
@@ -23,14 +23,31 @@ BuildRequires:    maven-install-plugin
 BuildRequires:    maven-jar-plugin
 BuildRequires:    maven-javadoc-plugin
 BuildRequires:    maven-shade-plugin
+BuildRequires:    apache-commons-lang
+BuildRequires:    glassfish-jaxb
+BuildRequires:    glassfish-jaxb-api
+BuildRequires:    junit
+BuildRequires:    jvnet-parent
+BuildRequires:    maven-project
+BuildRequires:    maven-shared-downloader
 BuildRequires:    maven-surefire-provider-junit4
+BuildRequires:    ws-jaxme
+BuildRequires:    wsdl4j
 
 Requires:         jpackage-utils
 Requires:         java
+Requires:         apache-commons-lang
+Requires:         glassfish-jaxb
+Requires:         junit
+Requires:         maven-project
+Requires:         maven-shared-downloader
 Requires:         maven-surefire-provider-junit4
+Requires:         ws-jaxme
+Requires:         wsdl4j
 
 %description
-Apache something something FIXME.
+The Apache CXF XJC-Utils provides a bunch of utilities for working
+with JAXB to generate better or more usable code.
 
 %package javadoc
 Summary:          Javadocs for %{name}
