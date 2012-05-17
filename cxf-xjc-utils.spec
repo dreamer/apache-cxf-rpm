@@ -68,7 +68,7 @@ This package contains the API documentation for %{name}.
 mvn-rpmbuild \
 	-Dmaven.test.skip=true \
 	-Dproject.build.sourceEncoding=UTF-8 \
-	install javadoc:aggregate
+	package javadoc:aggregate
 
 
 %install
