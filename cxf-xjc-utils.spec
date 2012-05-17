@@ -33,6 +33,7 @@ BuildRequires:    maven-shared-downloader
 BuildRequires:    maven-surefire-provider-junit4
 BuildRequires:    ws-jaxme
 BuildRequires:    wsdl4j
+BuildRequires:    xpp3
 
 Requires:         jpackage-utils
 Requires:         java
