@@ -1,0 +1,14 @@
+diff -Naur -x '*xml' aries-blueprint-0.3.1/blueprint-core/src/main/java/org/apache/aries/blueprint/container/BlueprintExtender.java aries-blueprint-0.3.1-work/blueprint-core/src/main/java/org/apache/aries/blueprint/container/BlueprintExtender.java
+--- aries-blueprint-0.3.1/blueprint-core/src/main/java/org/apache/aries/blueprint/container/BlueprintExtender.java	2010-11-04 00:48:47.792619000 +0100
++++ aries-blueprint-0.3.1-work/blueprint-core/src/main/java/org/apache/aries/blueprint/container/BlueprintExtender.java	2012-05-17 16:02:49.138074641 +0200
+@@ -40,8 +40,8 @@
+ import org.apache.aries.blueprint.utils.HeaderParser;
+ import org.apache.aries.blueprint.utils.HeaderParser.PathElement;
+ import org.apache.aries.proxy.ProxyManager;
+-import org.apache.aries.util.SingleServiceTracker;
+-import org.apache.aries.util.SingleServiceTracker.SingleServiceListener;
++import org.apache.aries.util.tracker.SingleServiceTracker;
++import org.apache.aries.util.tracker.SingleServiceTracker.SingleServiceListener;
+ import org.apache.aries.util.tracker.RecursiveBundleTracker;
+ import org.osgi.framework.Bundle;
+ import org.osgi.framework.BundleActivator;

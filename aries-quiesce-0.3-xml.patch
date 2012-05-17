@@ -1,0 +1,55 @@
+diff -Naur -x '*java' aries-quiesce-0.3/pom.xml aries-quiesce-0.3-work/pom.xml
+--- aries-quiesce-0.3/pom.xml	2011-01-22 17:56:47.205304000 +0100
++++ aries-quiesce-0.3-work/pom.xml	2012-05-14 23:16:51.238888117 +0200
+@@ -16,13 +16,6 @@
+ -->
+ <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+ 
+-    <parent>
+-        <groupId>org.apache.aries</groupId>
+-        <artifactId>java5-parent</artifactId>
+-        <version>0.3</version>
+-        <relativePath>../parent/default-parent/java5-parent/pom.xml</relativePath>
+-    </parent>
+-
+     <modelVersion>4.0.0</modelVersion>
+     <groupId>org.apache.aries.quiesce</groupId>
+     <artifactId>quiesce</artifactId>
+@@ -94,7 +87,7 @@
+     <modules>
+         <module>quiesce-api</module>
+         <module>quiesce-manager</module>
+-	    <module>quiesce-manager-itest</module>
++		<!-- <module>quiesce-manager-itest</module> -->
+     </modules>
+ 
+     <build>
+diff -Naur -x '*java' aries-quiesce-0.3/quiesce-api/pom.xml aries-quiesce-0.3-work/quiesce-api/pom.xml
+--- aries-quiesce-0.3/quiesce-api/pom.xml	2011-01-22 17:56:47.205304000 +0100
++++ aries-quiesce-0.3-work/quiesce-api/pom.xml	2012-05-14 23:18:23.479474367 +0200
+@@ -25,7 +25,6 @@
+     </parent>
+ 
+     <artifactId>org.apache.aries.quiesce.api</artifactId>
+-    <packaging>bundle</packaging>
+     <name>Apache Aries Quiesce API</name>
+     <description>
+       Quiesce API.
+@@ -46,4 +45,4 @@
+         </dependency>
+     </dependencies>
+ 
+-</project>
+\ No newline at end of file
++</project>
+diff -Naur -x '*java' aries-quiesce-0.3/quiesce-manager/pom.xml aries-quiesce-0.3-work/quiesce-manager/pom.xml
+--- aries-quiesce-0.3/quiesce-manager/pom.xml	2011-01-22 17:56:47.205304000 +0100
++++ aries-quiesce-0.3-work/quiesce-manager/pom.xml	2012-05-14 23:17:51.223619142 +0200
+@@ -25,7 +25,6 @@
+     </parent>
+ 
+     <artifactId>org.apache.aries.quiesce.manager</artifactId>
+-    <packaging>bundle</packaging>
+     <name>Apache Aries Quiesce Manager</name>
+     <description>
+       Quiesce Manager.

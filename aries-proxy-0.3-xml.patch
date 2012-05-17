@@ -1,0 +1,91 @@
+diff -Naur -x '*java' aries-proxy-0.3/pom.xml aries-proxy-0.3-work/pom.xml
+--- aries-proxy-0.3/pom.xml	2011-01-22 15:58:15.892272000 +0100
++++ aries-proxy-0.3-work/pom.xml	2012-05-17 16:18:18.340083894 +0200
+@@ -18,12 +18,6 @@
+ -->
+ <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+ 
+-    <parent>
+-        <groupId>org.apache.aries</groupId>
+-        <artifactId>java5-parent</artifactId>
+-        <version>0.3</version>
+-    </parent>  
+-
+     <modelVersion>4.0.0</modelVersion>
+     <groupId>org.apache.aries.proxy</groupId>
+     <artifactId>proxy</artifactId>
+@@ -103,7 +97,7 @@
+       <module>proxy-api</module>
+       <module>proxy-impl</module>
+       <module>proxy-bundle</module>
+-      <module>proxy-itests</module>
++	  <!-- <module>proxy-itests</module> -->
+     </modules>
+ 
+ </project>
+diff -Naur -x '*java' aries-proxy-0.3/proxy-api/pom.xml aries-proxy-0.3-work/proxy-api/pom.xml
+--- aries-proxy-0.3/proxy-api/pom.xml	2011-01-22 15:58:15.892272000 +0100
++++ aries-proxy-0.3-work/proxy-api/pom.xml	2012-05-17 16:15:32.529806466 +0200
+@@ -25,7 +25,6 @@
+     </parent>
+ 
+     <artifactId>org.apache.aries.proxy.api</artifactId>
+-    <packaging>bundle</packaging>
+     <name>Apache Aries Proxy</name>
+     <description>
+         This bundle contains the Apache Aries Proxy service API.
+@@ -54,8 +53,8 @@
+             <scope>provided</scope>
+         </dependency>
+         <dependency>
+-            <groupId>org.eclipse</groupId>
+-            <artifactId>osgi</artifactId>
++            <groupId>org.apache.felix</groupId>
++            <artifactId>org.osgi.core</artifactId>
+             <scope>provided</scope>
+         </dependency>
+         <dependency>
+diff -Naur -x '*java' aries-proxy-0.3/proxy-bundle/pom.xml aries-proxy-0.3-work/proxy-bundle/pom.xml
+--- aries-proxy-0.3/proxy-bundle/pom.xml	2011-01-22 15:58:15.892272000 +0100
++++ aries-proxy-0.3-work/proxy-bundle/pom.xml	2012-05-17 16:16:29.579556184 +0200
+@@ -25,7 +25,6 @@
+     </parent>
+ 
+     <artifactId>org.apache.aries.proxy</artifactId>
+-    <packaging>bundle</packaging>
+     <name>Apache Aries Proxy Bundle</name>
+     <description>
+         This bundle contains the Apache Aries Proxy Service.
+@@ -60,8 +59,8 @@
+             <scope>provided</scope>
+         </dependency>
+         <dependency>
+-            <groupId>org.eclipse</groupId>
+-            <artifactId>osgi</artifactId>
++            <groupId>org.apache.felix</groupId>
++            <artifactId>org.osgi.core</artifactId>
+             <scope>provided</scope>
+         </dependency>
+         <dependency>
+diff -Naur -x '*java' aries-proxy-0.3/proxy-impl/pom.xml aries-proxy-0.3-work/proxy-impl/pom.xml
+--- aries-proxy-0.3/proxy-impl/pom.xml	2011-01-22 15:58:15.892272000 +0100
++++ aries-proxy-0.3-work/proxy-impl/pom.xml	2012-05-17 16:15:56.411701461 +0200
+@@ -25,7 +25,6 @@
+     </parent>
+ 
+     <artifactId>org.apache.aries.proxy.impl</artifactId>
+-    <packaging>bundle</packaging>
+     <name>Apache Aries Proxy Implementation</name>
+     <description>
+         This bundle contains the proxy service implementation for Apache Aries
+@@ -72,8 +71,8 @@
+             <scope>provided</scope>
+         </dependency>
+         <dependency>
+-            <groupId>org.eclipse</groupId>
+-            <artifactId>osgi</artifactId>
++            <groupId>org.apache.felix</groupId>
++            <artifactId>org.osgi.core</artifactId>
+             <scope>provided</scope>
+         </dependency>
+       <dependency>

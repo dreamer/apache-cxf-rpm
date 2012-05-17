@@ -1,0 +1,232 @@
+diff -Naur -x '*java' aries-blueprint-0.3.1/blueprint-annotation-api/pom.xml aries-blueprint-0.3.1-work/blueprint-annotation-api/pom.xml
+--- aries-blueprint-0.3.1/blueprint-annotation-api/pom.xml	2011-02-22 09:04:46.756719000 +0100
++++ aries-blueprint-0.3.1-work/blueprint-annotation-api/pom.xml	2012-05-17 16:54:53.843653721 +0200
+@@ -23,7 +23,6 @@
+     </parent>
+ 
+     <artifactId>org.apache.aries.blueprint.annotation.api</artifactId>
+-    <packaging>bundle</packaging>
+     <name>Apache Aries Blueprint Annotation API</name>
+     <description>
+         This bundle contains the blueprint annotation api and the corresponding xml schema.
+@@ -41,8 +40,8 @@
+ 
+      <dependencies>
+         <dependency>
+-            <groupId>org.eclipse</groupId>
+-            <artifactId>osgi</artifactId>
++            <groupId>org.apache.felix</groupId>
++            <artifactId>org.osgi.core</artifactId>
+             <scope>provided</scope>
+         </dependency>
+     </dependencies>
+diff -Naur -x '*java' aries-blueprint-0.3.1/blueprint-annotation-impl/pom.xml aries-blueprint-0.3.1-work/blueprint-annotation-impl/pom.xml
+--- aries-blueprint-0.3.1/blueprint-annotation-impl/pom.xml	2011-02-22 09:04:46.756719000 +0100
++++ aries-blueprint-0.3.1-work/blueprint-annotation-impl/pom.xml	2012-05-17 16:55:18.878550561 +0200
+@@ -25,7 +25,6 @@
+   </parent>
+ 
+   <artifactId>org.apache.aries.blueprint.annotation.impl</artifactId>
+-  <packaging>bundle</packaging>
+   <name>Apache Aries Blueprint Annotation Impl</name>
+   <description>
+       This bundle contains the core implementation of Blueprint 
+@@ -67,8 +66,8 @@
+           <scope>provided</scope>
+       </dependency>
+       <dependency>
+-          <groupId>org.eclipse</groupId>
+-          <artifactId>osgi</artifactId>
++          <groupId>org.apache.felix</groupId>
++          <artifactId>org.osgi.core</artifactId>
+           <scope>provided</scope>
+       </dependency>
+       <dependency>
+diff -Naur -x '*java' aries-blueprint-0.3.1/blueprint-api/pom.xml aries-blueprint-0.3.1-work/blueprint-api/pom.xml
+--- aries-blueprint-0.3.1/blueprint-api/pom.xml	2011-02-22 09:04:46.756719000 +0100
++++ aries-blueprint-0.3.1-work/blueprint-api/pom.xml	2012-05-17 16:55:39.427465882 +0200
+@@ -23,7 +23,6 @@
+     </parent>
+ 
+     <artifactId>org.apache.aries.blueprint.api</artifactId>
+-    <packaging>bundle</packaging>
+     <name>Apache Aries Blueprint API</name>
+     <description>
+         This bundle contains the blueprint api 1.0.1 and the corresponding xml schema.
+@@ -41,8 +40,8 @@
+ 
+      <dependencies>
+         <dependency>
+-            <groupId>org.eclipse</groupId>
+-            <artifactId>osgi</artifactId>
++            <groupId>org.apache.felix</groupId>
++            <artifactId>org.osgi.core</artifactId>
+             <scope>provided</scope>
+         </dependency>
+     </dependencies>
+diff -Naur -x '*java' aries-blueprint-0.3.1/blueprint-bundle/pom.xml aries-blueprint-0.3.1-work/blueprint-bundle/pom.xml
+--- aries-blueprint-0.3.1/blueprint-bundle/pom.xml	2011-02-22 09:04:46.756719000 +0100
++++ aries-blueprint-0.3.1-work/blueprint-bundle/pom.xml	2012-05-17 17:01:47.060951098 +0200
+@@ -23,7 +23,6 @@
+     </parent>
+ 
+     <artifactId>org.apache.aries.blueprint</artifactId>
+-    <packaging>bundle</packaging>
+     <name>Apache Aries Blueprint Bundle</name>
+     <description>
+         This bundle contains the standalone implementation along with the API.
+@@ -101,8 +100,8 @@
+             <optional>true</optional>
+         </dependency>
+         <dependency>
+-            <groupId>org.eclipse</groupId>
+-            <artifactId>osgi</artifactId>
++            <groupId>org.apache.felix</groupId>
++            <artifactId>org.osgi.core</artifactId>
+             <scope>provided</scope>
+         </dependency>
+         <dependency>
+diff -Naur -x '*java' aries-blueprint-0.3.1/blueprint-cm/pom.xml aries-blueprint-0.3.1-work/blueprint-cm/pom.xml
+--- aries-blueprint-0.3.1/blueprint-cm/pom.xml	2011-02-22 09:04:46.756719000 +0100
++++ aries-blueprint-0.3.1-work/blueprint-cm/pom.xml	2012-05-17 16:52:47.256175368 +0200
+@@ -25,7 +25,6 @@
+   </parent>
+ 
+   <artifactId>org.apache.aries.blueprint.cm</artifactId>
+-  <packaging>bundle</packaging>
+   <name>Apache Aries Blueprint CM</name>
+   <description>
+       This bundle contains the ConfigAdmin namespace for blueprint.
+diff -Naur -x '*java' aries-blueprint-0.3.1/blueprint-core/pom.xml aries-blueprint-0.3.1-work/blueprint-core/pom.xml
+--- aries-blueprint-0.3.1/blueprint-core/pom.xml	2011-02-22 09:04:46.756719000 +0100
++++ aries-blueprint-0.3.1-work/blueprint-core/pom.xml	2012-05-17 15:49:46.899312263 +0200
+@@ -25,7 +25,7 @@
+   </parent>
+ 
+   <artifactId>org.apache.aries.blueprint.core</artifactId>
+-  <packaging>bundle</packaging>
++  <packaging>jar</packaging>
+   <name>Apache Aries Blueprint Core</name>
+   <description>
+       This bundle contains the core implementation of Blueprint 
+@@ -79,11 +79,13 @@
+           <artifactId>org.osgi.compendium</artifactId>
+           <scope>provided</scope>
+       </dependency>
++      <!--
+       <dependency>
+           <groupId>org.eclipse</groupId>
+           <artifactId>osgi</artifactId>
+           <scope>provided</scope>
+       </dependency>
++      -->
+       <dependency>
+           <groupId>org.slf4j</groupId>
+           <artifactId>slf4j-api</artifactId>
+@@ -104,10 +106,6 @@
+       	<scope>provided</scope>
+       </dependency>
+       <dependency>
+-        <groupId>org.apache.aries.testsupport</groupId>
+-        <artifactId>org.apache.aries.testsupport.unit</artifactId>
+-      </dependency>            
+-      <dependency>
+       	<groupId>org.apache.aries.proxy</groupId>
+       	<artifactId>org.apache.aries.proxy.api</artifactId>
+       </dependency>
+diff -Naur -x '*java' aries-blueprint-0.3.1/blueprint-sample/pom.xml aries-blueprint-0.3.1-work/blueprint-sample/pom.xml
+--- aries-blueprint-0.3.1/blueprint-sample/pom.xml	2011-02-22 09:04:46.756719000 +0100
++++ aries-blueprint-0.3.1-work/blueprint-sample/pom.xml	2012-05-17 16:56:31.984249318 +0200
+@@ -24,7 +24,6 @@
+ 
+     <artifactId>org.apache.aries.blueprint.sample</artifactId>
+     <name>Apache Aries Blueprint Sample</name>
+-    <packaging>bundle</packaging>
+     <description>
+         Example blueprint application, mostly used for integration tests.
+     </description>
+@@ -40,8 +39,8 @@
+ 
+     <dependencies>
+         <dependency>
+-            <groupId>org.eclipse</groupId>
+-            <artifactId>osgi</artifactId>
++            <groupId>org.apache.felix</groupId>
++            <artifactId>org.osgi.core</artifactId>
+             <scope>provided</scope>
+         </dependency>
+         <dependency>
+diff -Naur -x '*java' aries-blueprint-0.3.1/blueprint-sample-annotation/pom.xml aries-blueprint-0.3.1-work/blueprint-sample-annotation/pom.xml
+--- aries-blueprint-0.3.1/blueprint-sample-annotation/pom.xml	2011-02-22 09:04:46.756719000 +0100
++++ aries-blueprint-0.3.1-work/blueprint-sample-annotation/pom.xml	2012-05-17 16:56:57.362144746 +0200
+@@ -24,7 +24,6 @@
+ 
+     <artifactId>org.apache.aries.blueprint.sample-annotation</artifactId>
+     <name>Apache Aries Blueprint Sample for Testing Annotation</name>
+-    <packaging>bundle</packaging>
+     <description>
+         Example blueprint application, mostly used for annotation tests.
+     </description>
+@@ -44,8 +43,8 @@
+ 
+     <dependencies>
+         <dependency>
+-            <groupId>org.eclipse</groupId>
+-            <artifactId>osgi</artifactId>
++            <groupId>org.apache.felix</groupId>
++            <artifactId>org.osgi.core</artifactId>
+             <scope>provided</scope>
+         </dependency>
+         <dependency>
+diff -Naur -x '*java' aries-blueprint-0.3.1/pom.xml aries-blueprint-0.3.1-work/pom.xml
+--- aries-blueprint-0.3.1/pom.xml	2011-02-22 09:04:46.756719000 +0100
++++ aries-blueprint-0.3.1-work/pom.xml	2012-05-17 17:04:27.961288412 +0200
+@@ -18,13 +18,6 @@
+ -->
+ <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+ 
+-    <parent>
+-        <groupId>org.apache.aries</groupId>
+-        <artifactId>java5-parent</artifactId>
+-        <version>0.3</version>
+-        <relativePath>../parent/default-parent/java5-parent/pom.xml</relativePath>
+-    </parent>  
+-
+     <modelVersion>4.0.0</modelVersion>
+     <groupId>org.apache.aries.blueprint</groupId>
+     <artifactId>blueprint</artifactId>
+@@ -145,11 +138,6 @@
+                 <version>0.3</version>
+             </dependency>
+             <dependency>
+-              <groupId>org.apache.aries.testsupport</groupId>
+-              <artifactId>org.apache.aries.testsupport.unit</artifactId>
+-              <version>0.3</version>
+-            </dependency>            
+-            <dependency>
+             	<groupId>org.apache.aries.proxy</groupId>
+             	<artifactId>org.apache.aries.proxy.api</artifactId>
+             	<version>0.3</version>
+@@ -189,12 +177,13 @@
+     </build>
+ 
+     <modules>
+-        <module>blueprint-api</module>
++		<module>blueprint-api</module>
+         <module>blueprint-core</module>
+         <module>blueprint-cm</module>
+         <module>blueprint-bundle</module>
+         <module>blueprint-sample</module>
+         <module>blueprint-annotation-api</module>
++		<!--
+         <module>blueprint-annotation-impl</module>
+         <module>blueprint-sample-annotation</module>
+         <module>blueprint-testbundlea</module>
+@@ -202,6 +191,7 @@
+         <module>blueprint-testquiescebundle</module>
+         <module>blueprint-itests</module>
+         <module>blueprint-annotation-itest</module>
++		-->
+     </modules>
+ 
+ </project>
